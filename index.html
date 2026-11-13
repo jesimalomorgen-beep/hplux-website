@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HPLUX Peinture</title>
+<meta name="description" content="HPLUX Peinture à Frisange : peinture intérieure, plafonnage, façades, crépis et isolation par l'extérieur partout au Luxembourg. Devis gratuit au +352 621 741 405.">
+<meta property="og:title" content="HPLUX – Peintre, plafonneur et façadier au Luxembourg">
+<meta property="og:description" content="Peinture intérieure, plafonnage et façades partout au Luxembourg. Devis gratuit.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#14110d">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HousePainter","name":"HPLUX Peinture Sàrl-S","url":"https://www.hplux-peinture.lu","telephone":"+352621741405","email":"info@hplux-peinture.lu","address":{"@type":"PostalAddress","streetAddress":"4, Lëtzebuergerstrooss","postalCode":"L-5752","addressLocality":"Frisange","addressCountry":"LU"},"areaServed":"Luxembourg"}
+</script>
+<style>
+/* Layout: same structure as orionluxembourg.lu (floating pill menu, photo opener, rounded service cards,
+   three steps on a tinted band, dark "why" band, zones, FAQ, quote form), in HPLUX black and gold. */
+:root{
+  --brand:#14110d;
+  --gold:#d4a843;
+  --gold-lt:#eccb78;
+  --gold-dk:#8f6d1c;
+  --tint:#f8f5ee;
+  --border:#e9e3d7;
+  --text:#1d1a15;
+  --muted:#625c50;
+  --font:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:1.6;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+p{margin:0}
+svg{display:block}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.01em;text-wrap:balance}
+.container{width:min(1232px,100% - 40px);margin-inline:auto}
+.sec{padding:112px 0}
+.center{text-align:center}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:12px}
+.h2{font-size:clamp(28px,3vw,36px);line-height:1.12;color:var(--brand)}
+.lead{color:var(--muted);max-width:620px;margin:14px auto 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font:700 14px/1.2 var(--font);padding:12px 22px;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .15s ease,color .15s ease}
+.btn-gold{background:var(--gold);color:var(--brand)}
+.btn-gold:hover{background:var(--gold-lt)}
+.btn-dark{background:var(--brand);color:#fff}
+.btn-dark:hover{background:#2a251d}
+.btn-outline{background:#fff;border-color:var(--brand);color:var(--brand)}
+.btn-outline:hover{background:var(--tint)}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-lg{font-size:16px;padding:16px 28px}
+
+/* floating menu */
+.nav-wrap{position:fixed;top:16px;left:16px;right:16px;z-index:50}
+.nav{position:relative;max-width:1440px;margin:0 auto;height:64px;padding:8px 12px 8px 24px;background:var(--brand);border-radius:999px;display:flex;align-items:center;gap:18px;box-shadow:0 12px 32px rgba(0,0,0,.22)}
+.nav .brand img{height:46px;width:auto}
+.nav-links{display:flex;gap:22px;margin-left:14px}
+.nav-links a{color:rgba(255,255,255,.9);font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+.nav-links a:hover{color:var(--gold-lt)}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px}
+.lang button{font:700 12px/1 var(--font);color:rgba(255,255,255,.8);background:none;border:0;border-radius:999px;padding:7px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--brand)}
+.nav-phone{display:flex;align-items:center;gap:8px;color:#fff;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+.burger{display:none;width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:none;color:#fff;cursor:pointer;place-items:center}
+
+/* opener */
+.hero{position:relative;padding:214px 0 156px;color:#fff;background:#1c1914;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 82%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,10,7,.88) 0%,rgba(12,10,7,.66) 40%,rgba(12,10,7,.2) 100%),linear-gradient(0deg,rgba(12,10,7,.4),rgba(12,10,7,0) 45%)}
+.hero .container{position:relative;z-index:1}
+.hero-inner{max-width:760px;margin-left:clamp(0px,6vw,104px)}
+.badges{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;font-weight:700;margin-bottom:16px}
+.badges span{display:inline-flex;align-items:center;gap:8px}
+.badges svg{color:var(--gold)}
+.hero h1{font-size:clamp(38px,5vw,60px);line-height:1.05}
+.hero h1 span{display:block;color:var(--gold-lt)}
+.hero-text{font-size:18px;line-height:28px;color:rgba(255,255,255,.88);max-width:540px;margin-top:18px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+/* service cards */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:48px}
+.card{background:#fff;border:1px solid var(--border);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(20,17,13,.05)}
+.card > img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card-head{display:flex;align-items:center;gap:10px}
+.ico{width:36px;height:36px;border-radius:999px;background:var(--tint);color:var(--gold-dk);display:grid;place-items:center;flex:none}
+.card h3{font-size:18px;line-height:1.25;color:var(--brand)}
+.card-body > p{font-size:14.5px;color:var(--muted)}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:14px;line-height:1.45}
+.checks li{display:flex;gap:9px;align-items:flex-start;color:#2c2820}
+.checks svg{flex:none;margin-top:3px;color:var(--gold-dk)}
+.card .btn{margin-top:auto;width:100%}
+
+/* three steps */
+.tint{background:var(--tint)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px;text-align:left}
+.step{background:#fff;border:1px solid var(--border);border-radius:26px;padding:28px}
+.num{width:40px;height:40px;border-radius:999px;background:var(--brand);color:var(--gold-lt);display:grid;place-items:center;font-weight:800;margin-bottom:18px}
+.step h3{font-size:18px;color:var(--brand)}
+.step p{margin-top:8px;font-size:14.5px;color:var(--muted)}
+.after-cta{margin-top:40px}
+
+/* why */
+.dark{background:var(--brand);color:#fff}
+.why{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.dark .eyebrow{color:var(--gold)}
+.dark .h2{color:#fff}
+.why-text p{color:rgba(255,255,255,.85);margin:16px 0 28px;max-width:440px}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.feat{background:rgba(255,255,255,.06);border-radius:22px;padding:16px 18px;display:flex;align-items:center;gap:12px;font-size:15px;font-weight:700;line-height:1.35}
+.tick{width:26px;height:26px;border-radius:999px;background:var(--gold);color:var(--brand);display:grid;place-items:center;flex:none}
+
+/* zones */
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;max-width:860px;margin:28px auto 0}
+.chip{border:1px solid var(--border);background:#fff;border-radius:999px;font-size:14px;font-weight:600;padding:8px 16px;color:#2c2820}
+.chip-dark{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:700}
+
+/* faq */
+.faq{max-width:760px;margin:40px auto 0;text-align:left}
+.faq details{border-bottom:1px solid var(--border)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-weight:700;color:var(--brand)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{flex:none;color:var(--muted);transition:transform .2s ease}
+.faq details[open] summary svg{transform:rotate(180deg)}
+.faq details p{padding:0 0 18px;color:var(--muted);max-width:640px}
+
+/* quote form */
+.form-card{max-width:720px;margin:40px auto 0;background:#fff;border:1px solid var(--border);border-radius:26px;padding:32px;box-shadow:0 20px 50px rgba(20,17,13,.08);text-align:left;display:grid;gap:20px}
+.form-card label,.form-card legend{font-size:14px;font-weight:700;color:var(--brand);padding:0}
+.choices{border:0;margin:0;padding:0;display:grid;gap:10px}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.choice{border:1px solid var(--border);background:var(--tint);border-radius:16px;padding:13px 14px;font:700 14px/1.3 var(--font);color:var(--brand);cursor:pointer;text-align:center}
+.choice[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:grid;gap:8px}
+.field input,.field textarea{font:500 16px/1.4 var(--font);color:var(--text);background:#fff;border:1px solid var(--border);width:100%}
+.field input{height:54px;border-radius:999px;padding:0 20px}
+.field textarea{min-height:110px;border-radius:20px;padding:14px 20px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold-dk);box-shadow:0 0 0 3px rgba(212,168,67,.28)}
+.form-card .btn-lg{width:100%;height:56px}
+.form-note{font-size:13px;color:var(--muted);text-align:center}
+.form-error{color:#a3231c;font-size:14.5px;font-weight:700}
+.form-ready{background:var(--tint);border-radius:16px;padding:14px 18px;font-size:15px}
+.form-ready a{font-weight:800}
+.alt-send{max-width:720px;margin:14px auto 0}
+.alt-send .btn{width:100%;height:52px}
+.infos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px;text-align:left}
+.info{border:1px solid var(--border);border-radius:22px;padding:16px 18px;display:flex;align-items:center;gap:14px;background:#fff;text-decoration:none}
+.info .ico{background:var(--tint)}
+.info small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.info b{display:block;font-size:14.5px;color:var(--brand);line-height:1.35;overflow-wrap:anywhere}
+
+/* footer */
+.footer{background:var(--brand);color:rgba(255,255,255,.85);font-size:14px}
+.foot-grid{display:grid;grid-template-columns:minmax(0,1.5fr) repeat(3,minmax(0,1fr));gap:40px;padding:72px 0 48px}
+.footer img{height:74px;width:auto;margin-bottom:16px}
+.footer h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--gold-lt)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:22px 0 30px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:13px;color:rgba(255,255,255,.7)}
+
+@media (max-width:1180px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;margin:0;background:var(--brand);border-radius:24px;padding:10px 24px 14px;flex-direction:column;gap:0;box-shadow:0 12px 32px rgba(0,0,0,.22)}
+  .nav-links a{padding:13px 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links a:last-child{border-bottom:0}
+  .nav.open .nav-links{display:flex}
+  .burger{display:grid}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .infos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .why{grid-template-columns:1fr;gap:40px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .sec{padding:76px 0}
+  .nav-wrap{top:10px;left:10px;right:10px}
+  .nav{height:58px;padding:6px 8px 6px 16px;gap:10px}
+  .nav .brand img{height:40px}
+  .nav-links{top:68px}
+  .nav-phone span,.nav-cta{display:none}
+  .nav-phone{width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);justify-content:center}
+  .burger{width:42px;height:42px}
+  .nav-right{gap:8px}
+  .hero{padding:132px 0 76px}
+  .hero-bg{object-position:28% 82%}
+  .hero::after{background:linear-gradient(90deg,rgba(12,10,7,.86),rgba(12,10,7,.6))}
+  .hero-inner{margin-left:0}
+  .hero-text{font-size:16.5px;line-height:26px}
+  .cards,.steps,.feats,.infos,.row2{grid-template-columns:1fr}
+  .form-card{padding:22px 18px}
+  .foot-grid{grid-template-columns:1fr;gap:30px;padding:56px 0 36px}
+}
+@media (max-width:420px){.lang button{padding:7px 8px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.faq summary svg{transition:none}}
+</style>
+</head>
+<body id="top">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20l1.3-5A8.4 8.4 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-roller" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="15" height="6" rx="1.5"/><path d="M18 6h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-8v3"/><rect x="10" y="14" width="4" height="7" rx="1"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+    <symbol id="i-trowel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17 13 7l4 4L7 21H3v-4z"/><path d="m15 5 2-2 4 4-2 2"/></symbol>
+    <symbol id="i-wall" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10M15 4v6"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav-wrap">
+  <div class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="HPLUX Peinture"><img src="logo-blanc.png" alt="HPLUX Peinture" width="420" height="221"></a>
+    <nav class="nav-links" id="nav-links" aria-label="Navigation">
+      <a href="#top" data-i18n="n_home">Accueil</a>
+      <a href="#prestations" data-i18n="n_serv">Prestations</a>
+      <a href="#etapes" data-i18n="n_steps">Comment ça marche</a>
+      <a href="#pourquoi" data-i18n="n_why">Pourquoi HPLUX</a>
+      <a href="#zones" data-i18n="n_zones">Zones</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" data-i18n="n_contact">Nous contacter</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Langue">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="nav-phone" href="tel:+352621741405" aria-label="+352 621 741 405"><svg width="16" height="16"><use href="#i-phone"/></svg><span>+352 621 741 405</span></a>
+      <a class="btn btn-gold nav-cta" href="#contact" data-i18n="n_cta">Demander un devis</a>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><svg width="20" height="20"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <img class="hero-bg" src="hero.jpg" alt="" width="1568" height="882">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="badges">
+        <span><svg width="18" height="18"><use href="#i-check"/></svg><span data-i18n="h_b1">Entreprise autorisée au Luxembourg</span></span>
+        <span><svg width="18" height="18"><use href="#i-check"/></svg><span data-i18n="h_b2">Devis gratuit</span></span>
+      </div>
+      <h1><span style="color:inherit" data-i18n="h_1">Peinture, plafonnage &amp; façades</span><span data-i18n="h_2">au Luxembourg.</span></h1>
+      <p class="hero-text" data-i18n="h_p">HPLUX repeint vos intérieurs, enduit vos murs et rénove vos façades. Une seule équipe locale, dans tout le Luxembourg.</p>
+      <div class="hero-cta">
+        <a class="btn btn-gold btn-lg" href="#contact" data-i18n="h_c1">Demander un devis gratuit</a>
+        <a class="btn btn-ghost btn-lg" href="tel:+352621741405"><svg width="18" height="18"><use href="#i-phone"/></svg>+352 621 741 405</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="prestations">
+  <div class="container center">
+    <p class="eyebrow" data-i18n="s_ey">Nos prestations</p>
+    <h2 class="h2" data-i18n="s_h">Quatre métiers, une seule équipe à votre écoute</h2>
+    <div class="cards" style="text-align:left">
+      <article class="card">
+        <img src="peinture.jpg" alt="Peinture d'un mur au rouleau" width="967" height="726" loading="lazy">
+        <div class="card-body">
+          <div class="card-head"><span class="ico"><svg width="18" height="18"><use href="#i-roller"/></svg></span><h3 data-i18n="c1_t">Peinture intérieure</h3></div>
+          <p data-i18n="c1_d">Des murs et des plafonds nets, dans un logement habité ou vide.</p>
+          <ul class="checks">
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_1">Murs et plafonds</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_2">Cages d'escalier et couloirs</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_3">Portes, radiateurs et boiseries</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_4">Laques, lasures et vernis</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_5">Peintures décoratives</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c1_6">Protection des sols et du mobilier</span></li>
+          </ul>
+          <a class="btn btn-gold btn-gap" href="#contact" data-pick="0" data-i18n="n_cta">Demander un devis</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="facade.jpg" alt="Maison avec échafaudage pendant des travaux de façade" width="967" height="726" loading="lazy">
+        <div class="card-body">
+          <div class="card-head"><span class="ico"><svg width="18" height="18"><use href="#i-home"/></svg></span><h3 data-i18n="c2_t">Façades &amp; isolation</h3></div>
+          <p data-i18n="c2_d">Une façade propre, protégée et remise à neuf.</p>
+          <ul class="checks">
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c2_1">Peinture de façade</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c2_2">Enduits et crépis</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c2_3">Isolation thermique par l'extérieur</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c2_4">Nettoyage et traitement de protection</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c2_5">Montage et démontage d'échafaudages</span></li>
+          </ul>
+          <a class="btn btn-gold btn-gap" href="#contact" data-pick="1" data-i18n="n_cta">Demander un devis</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="plafonnage.jpg" alt="Plafonneur avec platoir et couteau à enduire" width="967" height="726" loading="lazy">
+        <div class="card-body">
+          <div class="card-head"><span class="ico"><svg width="18" height="18"><use href="#i-trowel"/></svg></span><h3 data-i18n="c3_t">Plafonnage &amp; enduits</h3></div>
+          <p data-i18n="c3_d">Des supports droits et lisses avant la mise en peinture.</p>
+          <ul class="checks">
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c3_1">Enduits sur murs et plafonds</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c3_2">Lissage et ponçage</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c3_3">Réparation des fissures</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c3_4">Préparation des supports</span></li>
+          </ul>
+          <a class="btn btn-gold btn-gap" href="#contact" data-pick="2" data-i18n="n_cta">Demander un devis</a>
+        </div>
+      </article>
+      <article class="card">
+        <img src="interieur.jpg" alt="Pièce rénovée aux murs blancs avec une échelle de peintre" width="967" height="725" loading="lazy">
+        <div class="card-body">
+          <div class="card-head"><span class="ico"><svg width="18" height="18"><use href="#i-wall"/></svg></span><h3 data-i18n="c4_t">Cloisons &amp; faux plafonds</h3></div>
+          <p data-i18n="c4_d">Créer ou transformer une pièce, finitions comprises.</p>
+          <ul class="checks">
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c4_1">Cloisons en plaques de plâtre</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c4_2">Faux plafonds</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c4_3">Chapes en plâtre</span></li>
+            <li><svg width="15" height="15"><use href="#i-check"/></svg><span data-i18n="c4_4">Enduits et mise en peinture</span></li>
+          </ul>
+          <a class="btn btn-gold btn-gap" href="#contact" data-pick="3" data-i18n="n_cta">Demander un devis</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="etapes">
+  <div class="container center">
+    <p class="eyebrow" data-i18n="st_ey">Comment ça fonctionne</p>
+    <h2 class="h2" data-i18n="st_h">Trois étapes simples, sans mauvaise surprise</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3 data-i18n="st1_t">Expliquez votre projet</h3><p data-i18n="st1_d">Remplissez le formulaire ou appelez-nous. Quelques photos par WhatsApp suffisent souvent pour commencer.</p></div>
+      <div class="step"><div class="num">2</div><h3 data-i18n="st2_t">Recevez votre devis</h3><p data-i18n="st2_d">Nous passons voir les lieux et vous remettons un devis gratuit et détaillé.</p></div>
+      <div class="step"><div class="num">3</div><h3 data-i18n="st3_t">Nous réalisons les travaux</h3><p data-i18n="st3_d">Chantier protégé, travail soigné et nettoyage à la fin.</p></div>
+    </div>
+    <a class="btn btn-gold btn-lg after-cta" href="#contact" data-i18n="st_cta">Obtenir mon devis</a>
+  </div>
+</section>
+
+<section class="sec dark" id="pourquoi">
+  <div class="container why">
+    <div class="why-text">
+      <p class="eyebrow" data-i18n="w_ey">À propos</p>
+      <h2 class="h2" data-i18n="w_h">Pourquoi choisir HPLUX</h2>
+      <p data-i18n="w_p">HPLUX Peinture réunit la peinture, le plafonnage et la façade au sein d'une même équipe. Vous expliquez votre projet, nous nous occupons du reste.</p>
+      <a class="btn btn-gold btn-lg" href="#contact" data-i18n="h_c1">Demander un devis gratuit</a>
+    </div>
+    <div class="feats">
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_1">Un seul contact pour tout le chantier</span></div>
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_2">Devis gratuit et détaillé</span></div>
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_3">Entreprise autorisée au Luxembourg</span></div>
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_4">Chantier protégé et nettoyé</span></div>
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_5">Préparation soignée des supports</span></div>
+      <div class="feat"><span class="tick"><svg width="14" height="14"><use href="#i-check"/></svg></span><span data-i18n="w_6">Échafaudage monté par nos soins</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="zones">
+  <div class="container center">
+    <p class="eyebrow" data-i18n="z_ey">Zones d'intervention</p>
+    <h2 class="h2" data-i18n="z_h">HPLUX intervient près de chez vous</h2>
+    <p class="lead" data-i18n="z_p">Basés à Frisange, nous intervenons dans tout le Luxembourg. Contactez-nous pour vérifier rapidement notre disponibilité dans votre secteur.</p>
+    <div class="chips">
+      <span class="chip chip-dark" data-i18n="z_r1">Luxembourg-Centre</span>
+      <span class="chip chip-dark" data-i18n="z_r2">Sud du Luxembourg</span>
+      <span class="chip chip-dark" data-i18n="z_r3">Nord du Luxembourg</span>
+      <span class="chip chip-dark" data-i18n="z_r4">Est du Luxembourg</span>
+    </div>
+    <div class="chips" style="margin-top:14px">
+      <span class="chip">Frisange</span><span class="chip">Luxembourg-Ville</span><span class="chip">Hesperange</span><span class="chip">Bettembourg</span><span class="chip">Dudelange</span><span class="chip">Esch-sur-Alzette</span><span class="chip">Mondorf-les-Bains</span><span class="chip">Remich</span><span class="chip">Differdange</span><span class="chip">Pétange</span><span class="chip">Strassen</span><span class="chip">Bertrange</span><span class="chip">Mamer</span><span class="chip">Mersch</span><span class="chip">Ettelbruck</span><span class="chip">Diekirch</span><span class="chip">Grevenmacher</span><span class="chip">Echternach</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec tint" id="faq">
+  <div class="container center">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="h2" data-i18n="f_h">Questions fréquentes</h2>
+    <div class="faq">
+      <details><summary><span data-i18n="q1">Le devis est-il gratuit ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a1">Oui. Nous passons voir les lieux et vous remettons un devis détaillé, sans engagement.</p></details>
+      <details><summary><span data-i18n="q2">Dans quelles zones intervenez-vous ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a2">Dans tout le Luxembourg. Notre siège est à Frisange.</p></details>
+      <details><summary><span data-i18n="q3">Faut-il vider la pièce avant les travaux ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a3">Non. Nous déplaçons et protégeons les meubles, les sols et les fenêtres avant de commencer. Rangez simplement les objets fragiles et de valeur.</p></details>
+      <details><summary><span data-i18n="q4">Fournissez-vous la peinture et le matériel ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a4">Oui, la peinture et le matériel peuvent être compris dans le devis. Si vous avez déjà choisi vos produits, dites-le-nous.</p></details>
+      <details><summary><span data-i18n="q5">Puis-je envoyer des photos avant le devis ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a5">Oui. Envoyez-nous quelques photos par WhatsApp au +352 621 741 405, cela nous aide à préparer la visite.</p></details>
+      <details><summary><span data-i18n="q6">Travaillez-vous pour les copropriétés et les entreprises ?</span><svg width="18" height="18"><use href="#i-down"/></svg></summary><p data-i18n="a6">Oui. Nous travaillons pour les particuliers, les syndics de copropriété et les professionnels.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="container center">
+    <h2 class="h2" data-i18n="k_h">Devis gratuit en 1 minute</h2>
+    <p class="lead" data-i18n="k_p">Laissez votre numéro, nous vous rappelons pour fixer une visite.</p>
+    <form class="form-card" id="quote-form" novalidate>
+      <fieldset class="choices">
+        <legend data-i18n="k_need">De quoi avez-vous besoin ?</legend>
+        <div class="choice-grid">
+          <button class="choice" type="button" aria-pressed="true" data-i18n="c1_t">Peinture intérieure</button>
+          <button class="choice" type="button" aria-pressed="false" data-i18n="c2_t">Façades &amp; isolation</button>
+          <button class="choice" type="button" aria-pressed="false" data-i18n="c3_t">Plafonnage &amp; enduits</button>
+          <button class="choice" type="button" aria-pressed="false" data-i18n="c4_t">Cloisons &amp; faux plafonds</button>
+        </div>
+      </fieldset>
+      <div class="row2">
+        <div class="field"><label for="q-name" data-i18n="k_name">Prénom *</label><input id="q-name" name="name" autocomplete="given-name" required></div>
+        <div class="field"><label for="q-tel" data-i18n="k_tel">Téléphone ou WhatsApp *</label><input id="q-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field"><label for="q-msg" data-i18n="k_msg">Que faut-il faire ? (facultatif)</label><textarea id="q-msg" name="msg" data-i18n-ph="k_ph" placeholder="ex. Repeindre un salon et un couloir à Frisange"></textarea></div>
+      <p class="form-error" id="q-error" role="alert" hidden></p>
+      <button class="btn btn-gold btn-lg" type="submit" data-i18n="k_wa">Envoyer par WhatsApp</button>
+      <p class="form-ready" id="q-ready" hidden><span data-i18n="k_ready">Votre message est prêt :</span> <a id="q-link" href="#" target="_blank" rel="noopener"></a></p>
+      <p class="form-note" data-i18n="k_note">Sans engagement. Le formulaire ouvre WhatsApp avec votre message déjà rédigé ; vous pouvez y ajouter des photos.</p>
+    </form>
+    <div class="alt-send"><button class="btn btn-outline" type="button" id="send-mail" data-i18n="k_mail">Ou envoyer par e-mail</button></div>
+    <div class="infos">
+      <a class="info" href="tel:+352621741405"><span class="ico"><svg width="18" height="18"><use href="#i-phone"/></svg></span><span><small data-i18n="i_tel">Téléphone</small><b>+352 621 741 405</b></span></a>
+      <a class="info" href="https://wa.me/352621741405" target="_blank" rel="noopener"><span class="ico"><svg width="18" height="18"><use href="#i-chat"/></svg></span><span><small>WhatsApp</small><b data-i18n="i_wa">Écrire sur WhatsApp</b></span></a>
+      <a class="info" href="mailto:info@hplux-peinture.lu"><span class="ico"><svg width="18" height="18"><use href="#i-mail"/></svg></span><span><small data-i18n="i_mail">E-mail</small><b>info@hplux-peinture.lu</b></span></a>
+      <div class="info"><span class="ico"><svg width="18" height="18"><use href="#i-pin"/></svg></span><span><small data-i18n="i_addr">Adresse</small><b style="overflow-wrap:normal">4, Lëtzebuergerstrooss<br>L&#8209;5752&nbsp;Frisange</b></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <img src="logo-blanc.png" alt="HPLUX Peinture" width="420" height="221" loading="lazy">
+        <p data-i18n="ft_p" style="max-width:300px">HPLUX réunit la peinture, le plafonnage et la façade au sein d'une même équipe, au Luxembourg.</p>
+      </div>
+      <div>
+        <h3 data-i18n="ft_s">Nos services</h3>
+        <ul>
+          <li><a href="#prestations" data-i18n="c1_t">Peinture intérieure</a></li>
+          <li><a href="#prestations" data-i18n="c2_t">Façades &amp; isolation</a></li>
+          <li><a href="#prestations" data-i18n="c3_t">Plafonnage &amp; enduits</a></li>
+          <li><a href="#prestations" data-i18n="c4_t">Cloisons &amp; faux plafonds</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ft_n">Navigation</h3>
+        <ul>
+          <li><a href="#top" data-i18n="n_home">Accueil</a></li>
+          <li><a href="#etapes" data-i18n="n_steps">Comment ça marche</a></li>
+          <li><a href="#zones" data-i18n="z_ey">Zones d'intervention</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" data-i18n="n_contact">Nous contacter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ft_c">Contact</h3>
+        <ul>
+          <li><a href="tel:+352621741405">+352 621 741 405</a></li>
+          <li><a href="mailto:info@hplux-peinture.lu">info@hplux-peinture.lu</a></li>
+          <li><a href="https://wa.me/352621741405" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li>4, Lëtzebuergerstrooss<br>L-5752 Frisange</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 HPLUX Peinture Sàrl-S. <span data-i18n="ft_r">Tous droits réservés.</span></span>
+      <span>RCS Luxembourg B313943 · <span data-i18n="ft_aut">Autorisation d'établissement n° 10200944/0</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var T = {
+    de: {
+      n_home: "Startseite", n_serv: "Leistungen", n_steps: "So funktioniert's", n_why: "Warum HPLUX", n_zones: "Einsatzgebiet", n_contact: "Kontakt", n_cta: "Angebot anfragen",
+      h_b1: "Zugelassener Betrieb in Luxemburg", h_b2: "Kostenloses Angebot", h_1: "Malerarbeiten, Verputz & Fassaden", h_2: "in Luxemburg.",
+      h_p: "HPLUX streicht Ihre Innenräume, verputzt Ihre Wände und erneuert Ihre Fassade. Ein Team aus der Region, in ganz Luxemburg.", h_c1: "Kostenloses Angebot anfragen",
+      s_ey: "Unsere Leistungen", s_h: "Vier Gewerke, ein Team für Sie",
+      c1_t: "Malerarbeiten innen", c1_d: "Saubere Wände und Decken, in bewohnten oder leeren Räumen.", c1_1: "Wände und Decken", c1_2: "Treppenhäuser und Flure", c1_3: "Türen, Heizkörper und Holzteile", c1_4: "Lacke, Lasuren und Klarlacke", c1_5: "Dekorative Maltechniken", c1_6: "Abdecken von Böden und Möbeln", c1_b: "Angebot Malerarbeiten",
+      c2_t: "Fassaden & Dämmung", c2_d: "Eine saubere, geschützte und erneuerte Fassade.", c2_1: "Fassadenanstrich", c2_2: "Putze und Edelputze", c2_3: "Wärmedämmung von außen", c2_4: "Reinigung und Schutzbehandlung", c2_5: "Auf- und Abbau von Gerüsten", c2_b: "Angebot Fassade",
+      c3_t: "Verputz & Spachtelarbeiten", c3_d: "Gerade, glatte Untergründe vor dem Anstrich.", c3_1: "Putz auf Wänden und Decken", c3_2: "Glätten und Schleifen", c3_3: "Reparatur von Rissen", c3_4: "Vorbereitung des Untergrunds", c3_b: "Angebot Verputz",
+      c4_t: "Trennwände & Decken", c4_d: "Räume schaffen oder umbauen, fertig bis zum Anstrich.", c4_1: "Trennwände aus Gipskarton", c4_2: "Abgehängte Decken", c4_3: "Gipsestriche", c4_4: "Verspachteln und Anstrich", c4_b: "Angebot Trockenbau",
+      st_ey: "So funktioniert's", st_h: "Drei einfache Schritte, ohne böse Überraschung",
+      st1_t: "Projekt beschreiben", st1_d: "Füllen Sie das Formular aus oder rufen Sie uns an. Ein paar Fotos per WhatsApp reichen oft für den Anfang.",
+      st2_t: "Angebot erhalten", st2_d: "Wir sehen uns alles vor Ort an und erstellen ein kostenloses, detailliertes Angebot.",
+      st3_t: "Wir führen die Arbeiten aus", st3_d: "Geschützte Baustelle, saubere Arbeit und Reinigung am Ende.", st_cta: "Mein Angebot anfordern",
+      w_ey: "Über uns", w_h: "Warum HPLUX", w_p: "HPLUX Peinture vereint Malerarbeiten, Verputz und Fassade in einem Team. Sie erklären Ihr Projekt, wir kümmern uns um den Rest.",
+      w_1: "Ein Ansprechpartner für die ganze Baustelle", w_2: "Kostenloses, detailliertes Angebot", w_3: "Zugelassener Betrieb in Luxemburg", w_4: "Geschützte und gereinigte Baustelle", w_5: "Sorgfältige Vorbereitung des Untergrunds", w_6: "Gerüst von uns aufgebaut",
+      z_ey: "Einsatzgebiet", z_h: "HPLUX arbeitet in Ihrer Nähe", z_p: "Von Frisange aus arbeiten wir in ganz Luxemburg. Fragen Sie kurz an, ob wir in Ihrer Gegend verfügbar sind.",
+      z_r1: "Luxemburg-Zentrum", z_r2: "Süden Luxemburgs", z_r3: "Norden Luxemburgs", z_r4: "Osten Luxemburgs",
+      f_h: "Häufige Fragen",
+      q1: "Ist das Angebot kostenlos?", a1: "Ja. Wir sehen uns alles vor Ort an und erstellen ein detailliertes, unverbindliches Angebot.",
+      q2: "In welchen Gebieten arbeiten Sie?", a2: "In ganz Luxemburg. Unser Sitz ist in Frisange.",
+      q3: "Muss ich das Zimmer vorher ausräumen?", a3: "Nein. Wir verschieben und schützen Möbel, Böden und Fenster vor Beginn. Räumen Sie nur zerbrechliche und wertvolle Gegenstände weg.",
+      q4: "Liefern Sie Farbe und Material?", a4: "Ja, Farbe und Material können im Angebot enthalten sein. Wenn Sie Ihre Produkte schon ausgewählt haben, sagen Sie es uns.",
+      q5: "Kann ich vor dem Angebot Fotos schicken?", a5: "Ja. Schicken Sie uns ein paar Fotos per WhatsApp an +352 621 741 405, das hilft uns bei der Vorbereitung des Termins.",
+      q6: "Arbeiten Sie auch für Eigentümergemeinschaften und Firmen?", a6: "Ja. Wir arbeiten für Privatkunden, Hausverwaltungen und Unternehmen.",
+      k_h: "Kostenloses Angebot in 1 Minute", k_p: "Hinterlassen Sie Ihre Nummer, wir rufen Sie zurück und vereinbaren einen Besichtigungstermin.",
+      k_need: "Was brauchen Sie?", k_name: "Vorname *", k_tel: "Telefon oder WhatsApp *", k_msg: "Was soll gemacht werden? (optional)", k_ph: "z. B. Wohnzimmer und Flur in Frisange streichen",
+      k_wa: "Per WhatsApp senden", k_mail: "Oder per E-Mail senden", k_ready: "Ihre Nachricht ist bereit:",
+      k_note: "Unverbindlich. Das Formular öffnet WhatsApp mit Ihrer fertigen Nachricht; dort können Sie Fotos hinzufügen.",
+      i_tel: "Telefon", i_wa: "Auf WhatsApp schreiben", i_mail: "E-Mail", i_addr: "Adresse",
+      ft_p: "HPLUX vereint Malerarbeiten, Verputz und Fassade in einem Team, in Luxemburg.", ft_s: "Unsere Leistungen", ft_n: "Navigation", ft_c: "Kontakt", ft_r: "Alle Rechte vorbehalten.", ft_aut: "Niederlassungsgenehmigung Nr. 10200944/0",
+      err: "Bitte geben Sie Ihren Vornamen und Ihre Telefonnummer an.", open_wa: "WhatsApp öffnen", open_mail: "E-Mail öffnen",
+      m_hello: "Guten Tag, mein Name ist", m_want: "Ich möchte ein Angebot für", m_tel: "Telefon", subj: "Angebotsanfrage"
+    },
+    en: {
+      n_home: "Home", n_serv: "Services", n_steps: "How it works", n_why: "Why HPLUX", n_zones: "Areas", n_contact: "Contact us", n_cta: "Request a quote",
+      h_b1: "Licensed business in Luxembourg", h_b2: "Free quote", h_1: "Painting, plastering & facades", h_2: "in Luxembourg.",
+      h_p: "HPLUX repaints your interiors, plasters your walls and renovates your facades. One local team, all over Luxembourg.", h_c1: "Request a free quote",
+      s_ey: "Our services", s_h: "Four trades, one team at your service",
+      c1_t: "Interior painting", c1_d: "Clean walls and ceilings, in occupied or empty homes.", c1_1: "Walls and ceilings", c1_2: "Stairwells and hallways", c1_3: "Doors, radiators and woodwork", c1_4: "Lacquers, stains and varnishes", c1_5: "Decorative paint finishes", c1_6: "Protection of floors and furniture", c1_b: "Quote for painting",
+      c2_t: "Facades & insulation", c2_d: "A clean, protected and renewed facade.", c2_1: "Facade painting", c2_2: "Renders and coatings", c2_3: "External thermal insulation", c2_4: "Cleaning and protective treatment", c2_5: "Scaffolding assembly and dismantling", c2_b: "Quote for a facade",
+      c3_t: "Plastering & filling", c3_d: "Straight, smooth surfaces before painting.", c3_1: "Plaster on walls and ceilings", c3_2: "Skim coating and sanding", c3_3: "Crack repair", c3_4: "Surface preparation", c3_b: "Quote for plastering",
+      c4_t: "Partitions & ceilings", c4_d: "Create or convert a room, finishes included.", c4_1: "Plasterboard partitions", c4_2: "Suspended ceilings", c4_3: "Plaster screeds", c4_4: "Filling and painting", c4_b: "Quote for drywall",
+      st_ey: "How it works", st_h: "Three simple steps, no nasty surprises",
+      st1_t: "Tell us about your project", st1_d: "Fill in the form or call us. A few photos on WhatsApp are often enough to get started.",
+      st2_t: "Get your quote", st2_d: "We visit the site and give you a free, detailed quote.",
+      st3_t: "We do the work", st3_d: "Protected site, careful work and a clean-up at the end.", st_cta: "Get my quote",
+      w_ey: "About", w_h: "Why choose HPLUX", w_p: "HPLUX Peinture brings painting, plastering and facade work together in one team. You explain your project, we take care of the rest.",
+      w_1: "One contact for the whole job", w_2: "Free, detailed quote", w_3: "Licensed business in Luxembourg", w_4: "Protected and cleaned site", w_5: "Careful surface preparation", w_6: "Scaffolding put up by us",
+      z_ey: "Service areas", z_h: "HPLUX works near you", z_p: "Based in Frisange, we work all over Luxembourg. Contact us to check our availability in your area.",
+      z_r1: "Central Luxembourg", z_r2: "South of Luxembourg", z_r3: "North of Luxembourg", z_r4: "East of Luxembourg",
+      f_h: "Frequently asked questions",
+      q1: "Is the quote free?", a1: "Yes. We visit the site and give you a detailed quote, with no obligation.",
+      q2: "Which areas do you cover?", a2: "All of Luxembourg. Our office is in Frisange.",
+      q3: "Do I need to empty the room before the work?", a3: "No. We move and protect furniture, floors and windows before we start. Just put away fragile and valuable items.",
+      q4: "Do you supply the paint and materials?", a4: "Yes, paint and materials can be included in the quote. If you have already chosen your products, just tell us.",
+      q5: "Can I send photos before the quote?", a5: "Yes. Send us a few photos on WhatsApp at +352 621 741 405, it helps us prepare the visit.",
+      q6: "Do you work for co-ownerships and businesses?", a6: "Yes. We work for homeowners, property managers and businesses.",
+      k_h: "Free quote in 1 minute", k_p: "Leave your number and we will call you back to arrange a visit.",
+      k_need: "What do you need?", k_name: "First name *", k_tel: "Phone or WhatsApp *", k_msg: "What needs doing? (optional)", k_ph: "e.g. Repaint a living room and hallway in Frisange",
+      k_wa: "Send by WhatsApp", k_mail: "Or send by e-mail", k_ready: "Your message is ready:",
+      k_note: "No obligation. The form opens WhatsApp with your message already written; you can add photos there.",
+      i_tel: "Phone", i_wa: "Message us on WhatsApp", i_mail: "E-mail", i_addr: "Address",
+      ft_p: "HPLUX brings painting, plastering and facade work together in one team, in Luxembourg.", ft_s: "Our services", ft_n: "Navigation", ft_c: "Contact", ft_r: "All rights reserved.", ft_aut: "Business permit no. 10200944/0",
+      err: "Please enter your first name and phone number.", open_wa: "Open WhatsApp", open_mail: "Open e-mail",
+      m_hello: "Hello, my name is", m_want: "I would like a quote for", m_tel: "Phone", subj: "Quote request"
+    },
+    fr: { err: "Merci d'indiquer votre prénom et votre numéro de téléphone.", open_wa: "Ouvrir WhatsApp", open_mail: "Ouvrir l'e-mail",
+      m_hello: "Bonjour, je m'appelle", m_want: "Je souhaite un devis pour", m_tel: "Téléphone", subj: "Demande de devis" }
+  };
+  var nodes = document.querySelectorAll('[data-i18n]'), phs = document.querySelectorAll('[data-i18n-ph]');
+  nodes.forEach(function (el) { if (T.fr[el.dataset.i18n] == null) T.fr[el.dataset.i18n] = el.textContent; });
+  phs.forEach(function (el) { T.fr[el.dataset.i18nPh] = el.getAttribute('placeholder'); });
+  var lang = 'fr';
+  function t(k) { return (T[lang] && T[lang][k] != null) ? T[lang][k] : T.fr[k]; }
+  function setLang(l) {
+    lang = T[l] ? l : 'fr';
+    document.documentElement.lang = lang;
+    nodes.forEach(function (el) { el.textContent = t(el.dataset.i18n); });
+    phs.forEach(function (el) { el.setAttribute('placeholder', t(el.dataset.i18nPh)); });
+    document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.lang === lang ? 'true' : 'false'); });
+    try { localStorage.setItem('hplux_lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.lang button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+  var saved = null; try { saved = localStorage.getItem('hplux_lang'); } catch (e) {}
+  if (saved && saved !== 'fr') setLang(saved);
+
+  var nav = document.getElementById('nav'), burger = document.getElementById('burger');
+  function setMenu(open) { nav.classList.toggle('open', open); burger.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  burger.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  document.querySelectorAll('#nav-links a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+
+  var choices = document.querySelectorAll('.choice');
+  function pick(i) { choices.forEach(function (c, k) { c.setAttribute('aria-pressed', k === i ? 'true' : 'false'); }); }
+  choices.forEach(function (c, i) { c.addEventListener('click', function () { pick(i); }); });
+  document.querySelectorAll('[data-pick]').forEach(function (a) { a.addEventListener('click', function () { pick(+a.dataset.pick); }); });
+
+  var err = document.getElementById('q-error'), ready = document.getElementById('q-ready'), link = document.getElementById('q-link');
+  function val(id) { return document.getElementById(id).value.trim(); }
+  function send(via) {
+    var name = val('q-name'), tel = val('q-tel');
+    if (!name || !tel) { err.textContent = t('err'); err.hidden = false; ready.hidden = true; document.getElementById(name ? 'q-tel' : 'q-name').focus(); return; }
+    err.hidden = true;
+    var chosen = document.querySelector('.choice[aria-pressed="true"]'), sep = lang === 'fr' ? ' : ' : ': ';
+    var lines = [t('m_hello') + ' ' + name + '.', t('m_want') + sep + (chosen ? chosen.textContent : '') + '.'];
+    if (val('q-msg')) lines.push(val('q-msg'));
+    lines.push(t('m_tel') + sep + tel);
+    var text = lines.join('\n');
+    var url = via === 'wa'
+      ? 'https://wa.me/352621741405?text=' + encodeURIComponent(text)
+      : 'mailto:info@hplux-peinture.lu?subject=' + encodeURIComponent(t('subj') + ' – ' + name) + '&body=' + encodeURIComponent(text);
+    link.href = url; link.textContent = t(via === 'wa' ? 'open_wa' : 'open_mail'); ready.hidden = false;
+    var framed = false; try { framed = window.top !== window.self; } catch (x) { framed = true; }
+    if (!framed) window.location.href = url;
+  }
+  document.getElementById('quote-form').addEventListener('submit', function (e) { e.preventDefault(); send('wa'); });
+  document.getElementById('send-mail').addEventListener('click', function () { send('mail'); });
+})();
+</script>
+</body>
+</html>
